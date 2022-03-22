@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Student details</title>
+    </head>
+    <body>
+        <h1>Student details</h1>
+        <p><strong>Student name:</strong> <span th:text="${student.name}"></span></p>
+        <p><strong>Student id:</strong> <span th:text="${student.id}"></span></p>
+        <table>
+            <tr>
+                <th>Unit</th>
+                <th>Grade</th>
+            </tr>
+            <tr th:each="pair : ${pairs}">
+                <td>
+                    <a th:href="'/unit/' + ${pair.first.code}" th:text="${pair.first.title}"></a>
+                </td>
+                <td>
+                    <span th:text="${pair.second}"></span>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

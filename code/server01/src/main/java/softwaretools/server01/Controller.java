@@ -30,4 +30,11 @@ public class Controller {
             .header(HttpHeaders.CONTENT_TYPE, "text/html")
             .body(htmlfile);
     }
+
+    @GetMapping("/bad")
+    public ResponseEntity<String> badPage() {
+        HttpHeaders headers = new HttpHeaders();
+        headers.set(HttpHeaders.CONTENT_TYPE, "text/plain");
+        return new ResponseEntity<String>("Error!", headers, 404);
+    }
 }

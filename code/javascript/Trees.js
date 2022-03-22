@@ -1,20 +1,22 @@
 const fs = require('fs');
 
-/* Loads the first argument as a file, removes all punctuation, 
+/* Loads the first argument as a file, removes all punctuation,
    and computes the frequency of each word. */
-let ws = null;
+// let ws = null;
 fs.readFile(process.argv[2], 'utf8', function (err, data) {
+    console.log(process.argv[2]);
   if (err) {
     return console.log("error: " + err);
   }
   const punct = /[!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~]/g;
   ws = data.replace(punct, '').trim().split(/\s+/);
+  console.log(ws);
+count(ws);
 });
 
-count(ws);
 
 function count(words) {
-  
+
   function insert(w, t) {
     if (t === null)         { t = { word : w, count : 1, left : null, right : null }; }
     else if (w === t.word)  { t.count += 1; }
@@ -23,9 +25,9 @@ function count(words) {
     return t;
   }
 
-  function flatten(t) { 
+  function flatten(t) {
     if (t === null) { return []; }
-    else { 
+    else {
       return [...flatten(t.left), {"word" : t.word, "count" : t.count}, ...flatten(t.right)];
     }
   }

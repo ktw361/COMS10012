@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.thymeleaf.context.Context;
 import softwaretools.server02.model.Database;
 import softwaretools.server02.model.Unit;
+import softwaretools.server02.model.Student;
 import softwaretools.server02.model.internal.DatabaseImpl;
 import java.util.List;
 
@@ -30,6 +31,43 @@ public class Controller {
             .status(200)
             .header(HttpHeaders.CONTENT_TYPE, "text/html")
             .body(htmlfile);
+    }
+
+    @GetMapping("/students")
+    public String studentsPage() {
+        Database d = new DatabaseImpl();
+        List<Student> students = d.getStudents();
+        Context cx = new Context();
+        cx.setVariable("students", students);
+        return templates.render("students.html", cx);
+    }
+
+    @GetMapping("/student/{id}")
+    public ResponseEntity<String> 
+    studentDetailPage(@PathVariable int id) {
+        Database d = new DatabaseImpl();
+        Student s = null;
+        for (Student ss : d.getStudents()) {
+            if (ss.getId() == id) {
+                s = ss;
+                break;
+            }
+        }
+        
+        if (s == null) {
+            return ResponseEntity
+                .status(404)
+                .header(HttpHeaders.CONTENT_TYPE, "text/plain")
+                .body("No student with id " + id);
+        }
+        
+        Context cx = new Context();
+        cx.setVariable("student", s);
+        cx.setVariable("pairs", s.getGrades());
+        return ResponseEntity
+            .status(200)
+            .header(HttpHeaders.CONTENT_TYPE, "text/html")
+            .body(templates.render("student.html", cx));
     }
 
     @GetMapping("/units")

@@ -1,0 +1,66 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+Controller	src/main/java/softwaretools/server02/Controller.java	/^public class Controller {$/;"	c
+Database	src/main/java/softwaretools/server02/model/Database.java	/^public interface Database {$/;"	i
+DatabaseImpl	src/main/java/softwaretools/server02/model/internal/DatabaseImpl.java	/^public class DatabaseImpl implements Database {$/;"	c
+Pair	src/main/java/softwaretools/server02/model/Pair.java	/^    public Pair(A a, B b) {$/;"	m	class:Pair
+Pair	src/main/java/softwaretools/server02/model/Pair.java	/^public class Pair<A, B> {$/;"	c
+Server02Application	src/main/java/softwaretools/server02/Server02Application.java	/^public class Server02Application {$/;"	c
+Server02ApplicationTests	src/test/java/softwaretools/server02/Server02ApplicationTests.java	/^class Server02ApplicationTests {$/;"	c
+Student	src/main/java/softwaretools/server02/model/Student.java	/^    public Student(int id, String name) {$/;"	m	class:Student
+Student	src/main/java/softwaretools/server02/model/Student.java	/^public class Student {$/;"	c
+Templates	src/main/java/softwaretools/server02/Templates.java	/^    public Templates() {$/;"	m	class:Templates
+Templates	src/main/java/softwaretools/server02/Templates.java	/^public class Templates {$/;"	c
+Unit	src/main/java/softwaretools/server02/model/Unit.java	/^    public Unit(String code, String title) {$/;"	m	class:Unit
+Unit	src/main/java/softwaretools/server02/model/Unit.java	/^public class Unit {$/;"	c
+a	src/main/java/softwaretools/server02/model/Pair.java	/^    A a;$/;"	f	class:Pair
+addGrade	src/main/java/softwaretools/server02/model/Student.java	/^    public void addGrade(Unit unit, Integer grade) {$/;"	m	class:Student
+b	src/main/java/softwaretools/server02/model/Pair.java	/^    B b;$/;"	f	class:Pair
+code	src/main/java/softwaretools/server02/model/Unit.java	/^    private String code;$/;"	f	class:Unit	file:
+contextLoads	src/test/java/softwaretools/server02/Server02ApplicationTests.java	/^	void contextLoads() {$/;"	m	class:Server02ApplicationTests
+engine	src/main/java/softwaretools/server02/Templates.java	/^    private final TemplateEngine engine;$/;"	f	class:Templates	file:
+equals	src/main/java/softwaretools/server02/model/Student.java	/^    public boolean equals(Object obj) {$/;"	m	class:Student
+equals	src/main/java/softwaretools/server02/model/Unit.java	/^    public boolean equals(Object obj) {$/;"	m	class:Unit
+getCode	src/main/java/softwaretools/server02/model/Unit.java	/^    public String getCode() {$/;"	m	class:Unit
+getFirst	src/main/java/softwaretools/server02/model/Pair.java	/^    public A getFirst() {$/;"	m	class:Pair
+getGrades	src/main/java/softwaretools/server02/model/Student.java	/^    public List<Pair<Unit, Integer>> getGrades() {$/;"	m	class:Student
+getId	src/main/java/softwaretools/server02/model/Student.java	/^    public int getId() {$/;"	m	class:Student
+getName	src/main/java/softwaretools/server02/model/Student.java	/^    public String getName() {$/;"	m	class:Student
+getSecond	src/main/java/softwaretools/server02/model/Pair.java	/^    public B getSecond() {$/;"	m	class:Pair
+getStudents	src/main/java/softwaretools/server02/model/Database.java	/^    List<Student> getStudents();$/;"	m	interface:Database
+getStudents	src/main/java/softwaretools/server02/model/internal/DatabaseImpl.java	/^    public List<Student> getStudents() {$/;"	m	class:DatabaseImpl
+getTitle	src/main/java/softwaretools/server02/model/Unit.java	/^    public String getTitle() {$/;"	m	class:Unit
+getUnits	src/main/java/softwaretools/server02/model/Database.java	/^    List<Unit> getUnits();$/;"	m	interface:Database
+getUnits	src/main/java/softwaretools/server02/model/internal/DatabaseImpl.java	/^    public List<Unit> getUnits() {$/;"	m	class:DatabaseImpl
+grades	src/main/java/softwaretools/server02/model/Student.java	/^    private final Map<Unit, Integer> grades;$/;"	f	class:Student	file:
+hashCode	src/main/java/softwaretools/server02/model/Student.java	/^    public int hashCode() {$/;"	m	class:Student
+hashCode	src/main/java/softwaretools/server02/model/Unit.java	/^    public int hashCode() {$/;"	m	class:Unit
+id	src/main/java/softwaretools/server02/model/Student.java	/^    private int id;$/;"	f	class:Student	file:
+loader	src/main/java/softwaretools/server02/Controller.java	/^    ResourceLoader loader;$/;"	f	class:Controller
+main	src/main/java/softwaretools/server02/Server02Application.java	/^	public static void main(String[] args) {$/;"	m	class:Server02Application
+mainPage	src/main/java/softwaretools/server02/Controller.java	/^    public ResponseEntity<Resource> mainPage() {$/;"	m	class:Controller
+name	src/main/java/softwaretools/server02/model/Student.java	/^    private String name;$/;"	f	class:Student	file:
+render	src/main/java/softwaretools/server02/Templates.java	/^    public String render(String template, Context c) {$/;"	m	class:Templates
+setCode	src/main/java/softwaretools/server02/model/Unit.java	/^    public void setCode(String code) {$/;"	m	class:Unit
+setId	src/main/java/softwaretools/server02/model/Student.java	/^    public void setId(int id) {$/;"	m	class:Student
+setName	src/main/java/softwaretools/server02/model/Student.java	/^    public void setName(String name) {$/;"	m	class:Student
+setTitle	src/main/java/softwaretools/server02/model/Unit.java	/^    public void setTitle(String title) {$/;"	m	class:Unit
+softwaretools.server02	src/main/java/softwaretools/server02/Controller.java	/^package softwaretools.server02;$/;"	p
+softwaretools.server02	src/main/java/softwaretools/server02/Server02Application.java	/^package softwaretools.server02;$/;"	p
+softwaretools.server02	src/main/java/softwaretools/server02/Templates.java	/^package softwaretools.server02;$/;"	p
+softwaretools.server02	src/test/java/softwaretools/server02/Server02ApplicationTests.java	/^package softwaretools.server02;$/;"	p
+softwaretools.server02.model	src/main/java/softwaretools/server02/model/Database.java	/^package softwaretools.server02.model;$/;"	p
+softwaretools.server02.model	src/main/java/softwaretools/server02/model/Pair.java	/^package softwaretools.server02.model;$/;"	p
+softwaretools.server02.model	src/main/java/softwaretools/server02/model/Student.java	/^package softwaretools.server02.model;$/;"	p
+softwaretools.server02.model	src/main/java/softwaretools/server02/model/Unit.java	/^package softwaretools.server02.model;$/;"	p
+softwaretools.server02.model.internal	src/main/java/softwaretools/server02/model/internal/DatabaseImpl.java	/^package softwaretools.server02.model.internal;$/;"	p
+students	src/main/java/softwaretools/server02/model/internal/DatabaseImpl.java	/^    private static final List<Student> students;$/;"	f	class:DatabaseImpl	file:
+templates	src/main/java/softwaretools/server02/Controller.java	/^    Templates templates;$/;"	f	class:Controller
+title	src/main/java/softwaretools/server02/model/Unit.java	/^    private String title;$/;"	f	class:Unit	file:
+unitDetailPage	src/main/java/softwaretools/server02/Controller.java	/^    unitDetailPage(@PathVariable String code) {$/;"	m	class:Controller
+units	src/main/java/softwaretools/server02/model/internal/DatabaseImpl.java	/^    private static final List<Unit> units;$/;"	f	class:DatabaseImpl	file:
+unitsPage	src/main/java/softwaretools/server02/Controller.java	/^    public String unitsPage() {$/;"	m	class:Controller
