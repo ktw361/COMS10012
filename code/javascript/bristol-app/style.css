@@ -9,6 +9,8 @@ body {
 }
 
 nav {
+  display: grid;
+  grid-template-columns: 1fr;
   text-align: center;
 }
 
@@ -36,6 +38,17 @@ main {
 }
 
 #populationTable th, #populationTable td {
+  text-align: center;
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+}
+
+#ExpectancyTable {
+  border: 1px solid black;
+  margin-left: 4rem;
+  margin-right: auto;
+}
+
+#ExpectancyTable th, #ExpectancyTable td {
   text-align: center;
   padding: 0.5rem 0.5rem 0.5rem 0.5rem;
 }
