@@ -37,6 +37,8 @@ class OverView extends React.Component {
         (result) => {
           if (this.state.loaded !== "error") {
             this.setState({loaded: "yes", item: result})
+            // console.log("OverView._fetchData(): ");
+            // console.log(result);
           }
         },
         (error) => {
@@ -118,7 +120,8 @@ class OverView extends React.Component {
               <Card.Subtitle className="mb-2 text-muted">{this.props.displayName}</Card.Subtitle>
               <Card.Text>
                 <b>ID: </b>{this.state.item.code} <br />
-                {this.hasChildren() ? <b>Contains:</b> : ""} </Card.Text>
+                {this.hasChildren() ? <b>Contains {this.state.item[this.props.children].length} {this.props.children}:</b> : ""} </Card.Text>
+                {/* {this.hasChildren() ? <b>Contains {this.props.children}:</b> : ""} </Card.Text> */}
               <ul>
               { this.children() }
               </ul>

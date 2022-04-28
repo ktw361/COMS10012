@@ -26,6 +26,7 @@ public class CountryController {
     
     @GetMapping(path = "/api/country/{id}", produces = "application/json")
     String getCountryById(@PathVariable String id) {
+        System.out.println("CountryController.getCountryById()");
         Country c = repository.getWithChildren(id);
         return ModelClass.renderJSON(c, Country.class, id);
     }   
