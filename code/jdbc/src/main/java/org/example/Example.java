@@ -8,7 +8,8 @@ import java.sql.ResultSet;
 
 public class Example {
 
-    public static String CS = "jdbc:mariadb://localhost:3306/elections?user=vagrant&localSocket=/var/run/mysqld/mysqld.sock";
+    // public static String CS = "jdbc:mariadb://localhost:3306/elections?user=vagrant&localSocket=/var/run/mysqld/mysqld.sock";
+    public static String CS = "jdbc:mariadb://localhost:3306/elections?user=vagrant";
 
     private void readData(Connection c) {
         String SQL = "SELECT id, name FROM Party";
