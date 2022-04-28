@@ -21,6 +21,7 @@ public class CountryController {
 
     @GetMapping("/api/countries")
     List<Country> getAllCountries() {
+        System.out.println("/api/countries");
         return repository.findAll();
     }
     

@@ -11,4 +11,7 @@ public interface WardRepository extends JpaRepository<Ward, String> {
     // JOIN ALL THE THINGS
     @Query("FROM Ward w JOIN FETCH w.parent JOIN FETCH w.parent.parent JOIN FETCH w.parent.parent.parent")
     List<Ward> fetchAllFull();
+
+    @Query("SELECT w FROM Ward w JOIN FETCH w.parent WHERE w.code = ?1")
+    Ward getNode(String id);
 }
