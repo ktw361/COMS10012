@@ -23,7 +23,8 @@ class OverView extends React.Component {
   }
 
   _fetchData() {
-    const url = "http://localhost:8000/api/" + this.props.type + "/" + this.props.code;
+    // const url = "http://localhost:8000/api/" + this.props.type + "/" + this.props.code;
+    const url = "http://localhost:8000/api/wards";
     console.log("OverView fetch " + url);
     fetch(url)
       .then(r => {
@@ -68,7 +69,7 @@ class OverView extends React.Component {
       return ""
     } else {
       return ch.map(i =>
-        <li key={i.code}><Button className="pt-0 pb-0" variant="link" 
+        <li key={i.code}><Button className="pt-0 pb-0" variant="link"
             onClick={() => this.navigate(i.code, false)}>{i.name}</Button></li>
         )
     }
@@ -120,7 +121,7 @@ class OverView extends React.Component {
               <Card.Subtitle className="mb-2 text-muted">{this.props.displayName}</Card.Subtitle>
               <Card.Text>
                 <b>ID: </b>{this.state.item.code} <br />
-                {this.hasChildren() ? <b>Contains {this.state.item[this.props.children].length} {this.props.children}:</b> : ""} </Card.Text>
+                // {this.hasChildren() ? <b>Contains {this.state.item[this.props.children].length} {this.props.children}:</b> : ""} </Card.Text>
                 {/* {this.hasChildren() ? <b>Contains {this.props.children}:</b> : ""} </Card.Text> */}
               <ul>
               { this.children() }
